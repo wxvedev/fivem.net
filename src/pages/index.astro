@@ -1,0 +1,16 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/Hero.astro";
+
+const SEO = {
+  title: "FiveM - the GTA V multiplayer modification you have dreamt of",
+  description:
+    "FiveM is a modification framework for GTA V, allowing you to play multiplayer on customized dedicated servers.",
+};
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+  <main>
+    <Hero />
+  </main>
+</Layout>

@@ -1,0 +1,24 @@
+---
+type Type = "red";
+
+interface Props {
+  text: string;
+  color: Type;
+  class: string;
+  target: "new" | "current";
+  url: string;
+}
+
+const colors: Record<Type, string> = {
+  red: "bg-red/5 hover:bg-red/10 border border-red px-4 py-2",
+};
+---
+
+<a
+  href={Astro.props.url}
+  target={Astro.props.target === "new" ? "_blank" : "_self"}
+  type="noreferrer"
+  class={`${Astro.props.class} ${colors[Astro.props.color]}`}
+>
+  {Astro.props.text}
+</a>
