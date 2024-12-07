@@ -15,6 +15,10 @@ export default {
         aqua: "#07baae",
         blue: "#0785bd",
         yellow: "#a2ba0b",
+        lua: "#000080",
+        csharp: "#68217A",
+        javascript: "#F7DF1E"
+
       },
     },
   },
