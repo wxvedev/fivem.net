@@ -32,19 +32,19 @@ const requirements: Requirements[] = [
   <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {
       requirements.map((requirement) => (
-        <article class="grid gap-4 p-4">
-          <h1 class="text-2xl text-center font-semibold">
+        <article class="grid p-4">
+          <h1 class="text-2xl text-center font-semibold mb-4">
             {requirement.os}
           </h1>
-          <ul class="space-y-4">
+          <ul class="grid gap-4">
             <div class="grid grid-cols-2 gap-4">
-              <div class="bg-blue/5 border border-blue/25 rounded-md p-4 backdrop-blur-md">
+              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
                 <h1 class="text-xl font-medium">CPU</h1>{" "}
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.cpu}
                 </p>
               </div>
-              <div class="bg-green/5 border border-green/25 rounded-md p-4 backdrop-blur-md">
+              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
                 <h1 class="text-xl font-medium">GPU</h1>{" "}
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.gpu}
@@ -52,13 +52,13 @@ const requirements: Requirements[] = [
               </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
-              <div class="bg-orange/5 border border-orange/25 rounded-md p-4 backdrop-blur-md">
+              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
                 <h1 class="text-xl font-medium">RAM</h1>{" "}
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.ram}
                 </p>
               </div>
-              <div class="bg-red/5 border border-red/25 rounded-md p-4 backdrop-blur-md">
+              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
                 <h1 class="text-xl font-medium">HDD</h1>{" "}
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.hdd}
