@@ -1,5 +1,4 @@
 ---
-import Logo from "@/assets/logo.png";
 import HamburgerIcon from "@/assets/icons/navigation/Hamburger.astro";
 import CloseIcon from "@/assets/icons/navigation/Close.astro";
 import Image from "astro/components/Image.astro";
@@ -19,7 +18,7 @@ const nav = [
     class="flex gap-6 items-center justify-between md:mx-auto w-full md:w-[80%] px-4 py-5"
   >
     <a href="/">
-      <Image src={Logo} format="webp" alt="Logo" class="w-48 md:w-64" width={224} height={224} />
+      <img src="./src/assets/logo.png" alt="Logo" class="w-48 md:w-64" />
     </a>
 
     <!-- Desktop Navigation -->
