@@ -1,0 +1,75 @@
+---
+import HamburgerIcon from "@/assets/icons/Hamburger.astro";
+import CloseIcon from "@/assets/icons/Close.astro";
+
+const nav = [
+  { name: "Forums", url: "https://forum.cfx.re/" },
+  { name: "Servers", url: "https://servers.fivem.net/" },
+  { name: "Docs", url: "https://docs.fivem.net/" },
+  { name: "Portal", url: "https://portal.cfx.re/" },
+];
+---
+
+<header
+  class="relative border-b border-black/5 dark:border-white/5 backdrop-blur-sm"
+>
+  <main
+    class="flex gap-6 items-center justify-between md:mx-auto w-full md:w-[80%] px-4 py-5"
+  >
+    <a href="/">
+      <img src="./src/assets/logo.svg" class="w-48 md:w-64" alt="Logo" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <aside class="hidden md:flex items-center gap-8">
+      {
+        nav.map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            class="text-lg font-medium text-gray-800 dark:text-gray-300 hover:text-white transition-colors"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </aside>
+
+    <!-- Mobile Navigation -->
+    <aside class="block md:hidden">
+      <button
+        id="menu-toggle"
+        aria-label="Toggle navigation menu"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      >
+        <HamburgerIcon />
+      </button>
+    </aside>
+
+    <nav
+      id="mobile-menu"
+      class="hidden fixed h-screen inset-0 bg-black bg-opacity-80 text-white flex flex-col items-center justify-center space-y-6 backdrop-blur-lg"
+    >
+      <button
+        aria-label="Close navigation menu"
+        class="absolute top-5 right-5"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+      >
+        <CloseIcon />
+      </button>
+      {
+        nav.map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            class="text-lg font-medium hover:underline"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </nav>
+  </main>
+</header>

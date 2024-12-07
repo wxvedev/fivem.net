@@ -1,0 +1,27 @@
+---
+type Type = "red" | "discord" | "none";
+
+interface Props {
+  text: string;
+  color: Type;
+  class?: string;
+  target: "new" | "current";
+  url: string;
+}
+
+const colors: Record<Type, string> = {
+  red: "bg-red/5 hover:bg-red border border-red rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
+  discord:
+    "bg-indigo-600/5 hover:bg-indigo-600 border border-indigo-600 rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
+  none: "",
+};
+---
+
+<a
+  href={Astro.props.url}
+  target={Astro.props.target === "new" ? "_blank" : "_self"}
+  type="noreferrer"
+  class={`transition-all ${Astro.props.class} ${colors[Astro.props.color]}`}
+>
+  {Astro.props.text}
+</a>

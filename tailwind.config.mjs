@@ -8,10 +8,10 @@ export default {
       },
       colors: {
         light: "#fff",
-        darkBlue: "#11131c",
-        lightBlue: "#1d212e",
+        main: "#111116",
         red: "#e60a53",
-        orange: "#"
+        orange: "#fe9040",
+        green: "#44714c",
       },
     },
   },

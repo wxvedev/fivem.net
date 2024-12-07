@@ -1,5 +1,6 @@
 ---
-import Header from "../components/Header.astro";
+import { ClientRouter } from "astro:transitions";
+import Header from "@/components/global/Header.astro";
 import "@fontsource-variable/inter";
 ---
 
@@ -12,11 +13,37 @@ import "@fontsource-variable/inter";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={Astro.props.description} />
     <title>{Astro.props.title}</title>
+    <ClientRouter />
   </head>
-  <body class="bg-light text-black dark:bg-darkBlue dark:text-white font-inter">
+  <body class="bg-light text-black dark:bg-main dark:text-white font-inter">
     <Header />
-    <main class="mx-auto md:w-[80%] py-12">
+    <main class="flex flex-col gap-8 mx-auto md:w-[80%] py-12 px-8 md:px-0">
       <slot />
     </main>
   </body>
 </html>
+
+<style is:global>
+  <style is:global > @keyframes enter {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .enter {
+    animation: enter 0.4s ease forwards;
+  }
+
+  #mobile-menu {
+    z-index: 60;
+  }
+
+  #menu-toggle {
+    z-index: 50;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import Link from "@/components/global/Link.astro";
+---
+
+<main
+  class="grid grid-rows-2 xl:grid-cols-2 items-center min-h-screen px-0 md:px-12 text-gray-100"
+>
+  <section class="flex flex-col gap-8 py-12 enter">
+    <header class="space-y-6">
+      <h1
+        class="text-gray-800 dark:text-white text-3xl md:text-6xl font-bold tracking-tight leading-tight text-wrap"
+      >
+        The <span class="text-red">Multiplayer Platform</span> you've only dreamt
+        of
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 text-wrap">
+        Join unique GTA V Servers designed by the community or create your own
+        with our extensive toolset powered by <a class="hover:underline" href="https://cfx.re">Cfx.re</a>.
+      </p>
+    </header>
+
+    <footer class="space-y-8">
+      <section class="flex flex-col sm:flex-row items-center gap-6">
+        <Link
+          class="hidden md:block py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
+          text="Download Now!"
+          target="current"
+          color="red"
+          url="https://runtime.fivem.net/client/FiveM.exe"
+        />
+        <Link
+          class="block md:hidden py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
+          text="Visit our forums"
+          target="new"
+          color="red"
+          url="https://forum.cfx.re"
+        />
+        <Link
+          class="py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
+          text="Join our Discord"
+          target="current"
+          color="discord"
+          url="https://discord.gg/fivem"
+        />
+      </section>
+
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Interested in creating your own server? <Link
+          class="hover:text-red font-semibold"
+          text="Click here"
+          target="current"
+          color="none"
+          url="/server-hosting"
+        />
+      </p>
+    </footer>
+  </section>
+
+  <section class="enter" style="animation-delay: .05s;">
+    <img
+      src="hero/gtaonline-the-criminal-enterprises-alternative-artwork-png-8717-1600.png"
+      class="hidden md:block"
+      style="aspect-ratio: 16/9;"
+    />
+  </section>
+</main>
