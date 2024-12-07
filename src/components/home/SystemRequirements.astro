@@ -29,45 +29,45 @@ const requirements: Requirements[] = [
   <header class="text-center">
     <h1 class="text-4xl font-semibold">System Requirements</h1>
   </header>
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <section class="flex flex-col md:flex-row justify-center gap-16 mt-8">
     {
       requirements.map((requirement) => (
-        <article class="grid p-4">
-          <h1 class="text-2xl text-center font-semibold mb-4">
-            {requirement.os}
-          </h1>
-          <ul class="grid gap-4">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
-                <h1 class="text-xl font-medium">CPU</h1>{" "}
+        <article class="max-w-xl">
+          <div class="space-y-4 p-4">
+            <header>
+              <h2 class="text-2xl font-semibold">{requirement.os}</h2>
+            </header>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li class="flex flex-col">
+                <div class="font-medium">CPU</div>
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.cpu}
                 </p>
-              </div>
-              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
-                <h1 class="text-xl font-medium">GPU</h1>{" "}
+              </li>
+              <li class="flex flex-col">
+                <div class="font-medium">GPU</div>
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.gpu}
                 </p>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
-                <h1 class="text-xl font-medium">RAM</h1>{" "}
+              </li>
+            </ul>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li class="flex flex-col">
+                <div class="font-medium">RAM</div>
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.ram}
                 </p>
-              </div>
-              <div class="bg-black/[0.01] border border-black/25 dark:bg-white/[0.01] dark:border-white/25 backdrop-blur-md rounded-md p-4">
-                <h1 class="text-xl font-medium">HDD</h1>{" "}
+              </li>
+              <li class="flex flex-col">
+                <div class="font-medium">HDD</div>
                 <p class="text-gray-600 dark:text-gray-400">
                   {requirement.hdd}
                 </p>
-              </div>
-            </div>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </article>
       ))
     }
-  </main>
+  </section>
 </main>

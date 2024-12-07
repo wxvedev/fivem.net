@@ -24,7 +24,7 @@ const features: Feature[] = [
   {
     title: "AI",
     description:
-      "Enjoy immersive gameplay with native AI functionality. Engage in PvE combat or roam with NPC companions for a richer experience.",
+      "Enjoy immersive gameplay with native AI functionality. Engage in PvE combat or roam with NPC companions.",
     icon: UserGroupIcon,
     color: "blue",
   },
@@ -53,7 +53,7 @@ const variant: Record<Color, string> = {
 ---
 
 <main class="space-y-4">
-  <header>
+  <header class="space-y-1">
     <h1 class="text-4xl font-semibold">Features</h1>
     <h4 class="text-lg text-gray-600 dark:text-gray-400">
       Below are some of the many features we provide.
@@ -61,7 +61,7 @@ const variant: Record<Color, string> = {
   </header>
 
   <main>
-    <ul class="flex flex-col gap-8 md:flex-row mx-auto">
+    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mx-auto">
       {
         features.map((feature) => {
           const { title, description, color } = feature;
