@@ -1,0 +1,73 @@
+---
+type Requirements = {
+  os: string;
+  cpu: string;
+  gpu: string;
+  ram: string;
+  hdd: string;
+};
+
+const requirements: Requirements[] = [
+  {
+    os: "Windows 11",
+    cpu: "Intel Core i5 3470 @ 3.2GHz / AMD X8 FX-8350 @ 4GHz",
+    gpu: "NVIDIA GTX 660 2GB / AMD HD 7870 2GB",
+    ram: "16GB",
+    hdd: "72GB + 8GB",
+  },
+  {
+    os: "Windows 10",
+    cpu: "Intel Core 2 Q6600 @ 2.40GHz / AMD Phenom 9850 @ 2.5GHz",
+    gpu: "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB / Intel HD GT2",
+    ram: "8GB (4 may work)",
+    hdd: "72GB + ~4GB",
+  },
+];
+---
+
+<main class="py-8">
+  <header class="text-center mb-6">
+    <h1 class="text-4xl font-semibold">System Requirements</h1>
+  </header>
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {
+      requirements.map((requirement) => (
+        <article class="grid gap-4 p-4">
+          <h1 class="text-2xl text-center font-semibold">
+            {requirement.os}
+          </h1>
+          <ul class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-blue/5 border border-blue/25 rounded-md p-4 backdrop-blur-md">
+                <h1 class="text-xl font-medium">CPU</h1>{" "}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {requirement.cpu}
+                </p>
+              </div>
+              <div class="bg-green/5 border border-green/25 rounded-md p-4 backdrop-blur-md">
+                <h1 class="text-xl font-medium">GPU</h1>{" "}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {requirement.gpu}
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-orange/5 border border-orange/25 rounded-md p-4 backdrop-blur-md">
+                <h1 class="text-xl font-medium">RAM</h1>{" "}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {requirement.ram}
+                </p>
+              </div>
+              <div class="bg-red/5 border border-red/25 rounded-md p-4 backdrop-blur-md">
+                <h1 class="text-xl font-medium">HDD</h1>{" "}
+                <p class="text-gray-600 dark:text-gray-400">
+                  {requirement.hdd}
+                </p>
+              </div>
+            </div>
+          </ul>
+        </article>
+      ))
+    }
+  </main>
+</main>

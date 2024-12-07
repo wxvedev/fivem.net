@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import Header from "@/components/global/Header.astro";
+import Footer from "@/components/global/Footer.astro";
 import "@fontsource-variable/inter";
 ---
 
@@ -15,11 +16,14 @@ import "@fontsource-variable/inter";
     <title>{Astro.props.title}</title>
     <ClientRouter />
   </head>
-  <body class="bg-light text-black dark:bg-main dark:text-white font-inter">
+  <body
+    class="bg-light text-black dark:bg-main dark:text-white font-inter bg-[url('/background.png')] bg-repeat"
+  >
     <Header />
-    <main class="flex flex-col gap-8 mx-auto md:w-[80%] py-12 px-8 md:px-0">
+    <main class="mx-auto md:w-[80%] py-0 md:py-24 px-8 md:px-0">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
 

@@ -1,0 +1,89 @@
+---
+import CloudDownloadIcon from "@/assets/icons/features/CloudDownload.astro";
+import UserGroupIcon from "@/assets/icons/features/UserGroup.astro";
+import SyncAltIcon from "@/assets/icons/features/SyncAlt.astro";
+import WidgetsIcon from "@/assets/icons/features/Widgets.astro";
+
+type Color = "aqua" | "blue" | "yellow" | "red";
+
+type Feature = {
+  title: string;
+  description: string;
+  icon: any;
+  color: Color;
+};
+
+const features: Feature[] = [
+  {
+    title: "Streaming",
+    description:
+      "Transform your server with custom vehicles, maps, weapons, and more, all loaded seamlessly in real-time.",
+    icon: CloudDownloadIcon,
+    color: "aqua",
+  },
+  {
+    title: "AI",
+    description:
+      "Enjoy immersive gameplay with native AI functionality. Engage in PvE combat or roam with NPC companions for a richer experience.",
+    icon: UserGroupIcon,
+    color: "blue",
+  },
+  {
+    title: "Sync",
+    description:
+      "Experience smooth multiplayer interactions with improved network code built on Rockstar's original technology.",
+    icon: SyncAltIcon,
+    color: "yellow",
+  },
+  {
+    title: "Standalone",
+    description:
+      "Switch effortlessly between GTA Online and FiveM without altering your GTA V installation or risking a ban.",
+    icon: WidgetsIcon,
+    color: "red",
+  },
+];
+
+const variant: Record<Color, string> = {
+  aqua: "border border-aqua/25 bg-aqua/5 text-aqua rounded-md",
+  blue: "border border-blue/25 bg-blue/5 text-blue rounded-md",
+  yellow: "border border-yellow/25 bg-yellow/5 text-yellow rounded-md",
+  red: "border border-red/25 bg-red/5 text-red rounded-md",
+};
+---
+
+<main class="space-y-4">
+  <header>
+    <h1 class="text-4xl font-semibold">Features</h1>
+    <h4 class="text-lg text-gray-600 dark:text-gray-400">
+      Below are some of the many features we provide.
+    </h4>
+  </header>
+
+  <main>
+    <ul class="flex flex-col gap-8 md:flex-row mx-auto">
+      {
+        features.map((feature) => {
+          const { title, description, color } = feature;
+          return (
+            <li
+              class={`space-y-1 px-4 py-4 backdrop-blur-md ${variant[color]}`}
+            >
+              <header class="flex items-center gap-4">
+                <i class={`text-${color}`}>
+                  <feature.icon />
+                </i>
+                <h1 class="text-2xl font-semibold">{title}</h1>
+              </header>
+              <main>
+                <p class="text-gray-600 dark:text-gray-400 text-wrap">
+                  {description}
+                </p>
+              </main>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
+</main>

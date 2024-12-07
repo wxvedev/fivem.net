@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/home/Hero.astro";
+import Features from "@/components/home/Features.astro";
+import SystemRequirements from "@/components/home/SystemRequirements.astro";
 
 const SEO = {
   title: "FiveM - the GTA V multiplayer modification you have dreamt of",
@@ -10,7 +12,9 @@ const SEO = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-  <main>
+  <main class="space-y-16">
     <Hero />
+    <Features />
+    <SystemRequirements />
   </main>
 </Layout>
