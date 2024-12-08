@@ -1,0 +1,146 @@
+---
+import Feature from "../global/Feature.astro";
+import Link from "../global/Link.astro";
+
+const tiers = [
+  {
+    name: "PEBBLE",
+    price: 0,
+    monthlyPrice: 0,
+    slots: "Up to 48",
+    features: {
+      streamCustomClothing: false,
+      elementClubForum: false,
+      elementClubDiscord: false,
+      colorCode: false,
+      highlight: false,
+      animatedIcons: false,
+    },
+  },
+  {
+    name: "ARGENTUM",
+    price: 206.91,
+    monthlyPrice: 17.24,
+    slots: "Up to 64",
+    saveAmount: 4,
+    features: {
+      streamCustomClothing: true,
+      elementClubForum: true,
+      elementClubDiscord: true,
+      colorCode: true,
+      highlight: false,
+      animatedIcons: false,
+    },
+  },
+  {
+    name: "AURUM",
+    price: 344.85,
+    monthlyPrice: 28.74,
+    slots: "Up to 128, 64 with Legacy Onesync",
+    saveAmount: 5,
+    features: {
+      streamCustomClothing: true,
+      elementClubForum: true,
+      elementClubDiscord: true,
+      colorCode: true,
+      highlight: "Aurum Gold",
+      animatedIcons: false,
+    },
+  },
+  {
+    name: "PLATINUM",
+    price: 689.7,
+    monthlyPrice: 57.48,
+    slots: "Up to 2048 (1024 for RedM), 128 with Legacy Onesync",
+    saveAmount: 5,
+    features: {
+      streamCustomClothing: true,
+      elementClubForum: true,
+      elementClubDiscord: true,
+      colorCode: true,
+      highlight: "Cfx.re Magenta",
+      animatedIcons: true,
+    },
+  },
+];
+---
+
+<main class="enter" style="animation-delay: .15s;">
+  <header class="text-center">
+    <h1 class="text-4xl font-semibold tracking-tighter">
+      Element Club Subscription
+    </h1>
+    <h4 class="text-gray-600 dark:text-gray-400">
+      Select a plan that works for you through our <a
+        class="text-red font-medium"
+        href="https://portal.cfx.re/">Portal</a
+      >
+    </h4>
+  </header>
+  <div class="min-h-screen text-white p-8">
+    <div class="max-w-7xl mx-auto space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          tiers.map((tier) => (
+            <div class="rounded-md p-6 space-y-6">
+              <div class="space-y-2">
+                <h3 class="text-center text-zinc-400">{tier.name}</h3>
+                <div class="text-center">
+                  <span class="text-4xl font-bold">${tier.price}</span>
+                  <span class="text-zinc-400 text-sm block">annually</span>
+                </div>
+                {tier.saveAmount && (
+                  <div class="text-center text-sm text-zinc-400">
+                    Save {tier.saveAmount}% (${tier.monthlyPrice}/month)
+                  </div>
+                )}
+              </div>
+
+              <div class="space-y-4">
+                <div class="text-sm">{tier.slots}</div>
+                <div class="space-y-3">
+                  <Feature
+                    enabled={tier.features.streamCustomClothing}
+                    text="Stream Custom Clothing"
+                  />
+                  <Feature
+                    enabled={tier.features.elementClubForum}
+                    text="Access to the Element Club forum category"
+                  />
+                  <Feature
+                    enabled={tier.features.elementClubDiscord}
+                    text="Access to the Element Club Discord channels"
+                  />
+                  <Feature
+                    enabled={tier.features.colorCode}
+                    text="Use a ^1-9 color code in your server name"
+                  />
+                  <Feature
+                    enabled={!!tier.features.highlight}
+                    text={
+                      tier.features.highlight
+                        ? `Have a cool color highlight for your server in public listings (${tier.features.highlight})`
+                        : "Have a cool color highlight for your server in public listings"
+                    }
+                  />
+                  <Feature
+                    enabled={tier.features.animatedIcons}
+                    text="Use animated server icons (*.apng)"
+                  />
+                </div>
+              </div>
+
+              <Link
+                class="block py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center"
+                text="Subscribe"
+                target="new"
+                color="red"
+                url="https://portal.cfx.re/subscriptions"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</main>

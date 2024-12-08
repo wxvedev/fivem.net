@@ -17,8 +17,10 @@ export default {
         yellow: "#a2ba0b",
         lua: "#000080",
         csharp: "#68217A",
-        javascript: "#F7DF1E"
-
+        javascript: "#F7DF1E",
+        argentum: "rgba(131, 131, 131, 0.25)",
+        aurum: "rgba(255, 217, 0, 0.25)",
+        platinum: "#e60a53",
       },
     },
   },
