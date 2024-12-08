@@ -3,12 +3,6 @@ import Link from "../global/Link.astro";
 
 type Color = "lua" | "csharp" | "javascript";
 
-const variant: Record<Color, string> = {
-  lua: "border border-lua/25 bg-lua/5 text-lua rounded-md",
-  csharp: "border border-purple/25 bg-purple/5 text-purple rounded-md",
-  javascript: "border border-yellow/25 bg-yellow/5 text-yellow rounded-md",
-};
-
 type Language = {
   name: string;
   description: string;
@@ -41,7 +35,7 @@ const languages: Language[] = [
 ];
 ---
 
-<main class="enter space-y-8 p-4 rounded-md" style="animation-delay: .25s;">
+<main class="enter space-y-8 md:p-4 rounded-md" style="animation-delay: .25s;">
   <header class="space-y-1 text-center">
     <h1 class="text-4xl font-semibold tracking-tighter">We 💝 Developers!</h1>
     <h4 class="text-gray-600 dark:text-gray-400">
@@ -94,7 +88,7 @@ const languages: Language[] = [
             return (
               <li>
                 <a
-                  class="bg-black/[0.02] dark:bg-white/[0.02] border dark:border-white/25 border-black/25 backdrop-blur-md rounded-md flex items-center gap-4 px-4 hover:-translate-x-1 transition-all"
+                  class="bg-black/[0.02] dark:bg-white/[0.02] border dark:border-white/25 border-black/25 backdrop-blur-md rounded-md flex items-center gap-4 px-4 hover:-translate-y-1 transition-all"
                   href={language.url}
                 >
                   <img

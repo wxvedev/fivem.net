@@ -19,7 +19,7 @@ const requirements: Requirements[] = [
     os: "Windows 10",
     cpu: "Intel Core 2 Q6600 @ 2.40GHz / AMD Phenom 9850 @ 2.5GHz",
     gpu: "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB / Intel HD GT2",
-    ram: "8GB (4 may work)",
+    ram: "8GB",
     hdd: "72GB + ~4GB",
   },
 ];
@@ -33,11 +33,11 @@ const requirements: Requirements[] = [
     {
       requirements.map((requirement) => (
         <article class="max-w-xl">
-          <div class="space-y-4 p-4">
+          <div class="space-y-4 md:p-4">
             <header>
               <h2 class="text-2xl font-semibold">{requirement.os}</h2>
             </header>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ul class="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <li class="flex flex-col">
                 <div class="font-medium">CPU</div>
                 <p class="text-gray-600 dark:text-gray-400">
