@@ -35,41 +35,5 @@ const nav = [
         ))
       }
     </aside>
-
-    <!-- Mobile Navigation -->
-    <aside class="block md:hidden">
-      <button
-        id="menu-toggle"
-        aria-label="Toggle navigation menu"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-      >
-        <HamburgerIcon />
-      </button>
-    </aside>
-
-    <nav
-      id="mobile-menu"
-      class="hidden fixed h-screen inset-0 bg-black bg-opacity-80 text-white flex flex-col items-center justify-center space-y-6 backdrop-blur-lg"
-    >
-      <button
-        aria-label="Close navigation menu"
-        class="absolute top-5 right-5"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-      >
-        <CloseIcon />
-      </button>
-      {
-        nav.map((item) => (
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            class="text-lg font-medium hover:underline"
-          >
-            {item.name}
-          </a>
-        ))
-      }
-    </nav>
   </main>
 </header>
