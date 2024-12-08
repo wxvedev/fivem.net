@@ -1,38 +1,39 @@
 ---
-const sections = [
+import XIcon from "@/assets/icons/brands/X.astro";
+import GitHubIcon from "@/assets/icons/brands/GitHub.astro";
+import DiscordIcon from "@/assets/icons/brands/Discord.astro";
+
+const links = [
   {
-    name: "Socials",
-    links: [
-      {
-        name: "X (Formerly Twitter)",
-        url: "https://x.com/fivem",
-      },
-      {
-        name: "GitHub",
-        url: "https://github.com/citizenfx/fivem",
-      },
-    ],
+    name: "Servers",
+    url: "https://servers.fivem.net/",
   },
   {
-    name: "Links",
-    links: [
-      {
-        name: "Forum",
-        url: "https://forum.cfx.re",
-      },
-      {
-        name: "Servers",
-        url: "https://servers.cfx.re",
-      },
-      {
-        name: "Docs",
-        url: "https://docs.fivem.net",
-      },
-      {
-        name: "Portal",
-        url: "https://portal.cfx.re",
-      },
-    ],
+    name: "Forums",
+    url: "https://forum.fivem.net/",
+  },
+  {
+    name: "Docs",
+    url: "https://docs.fivem.net/",
+  },
+  {
+    name: "Portal",
+    url: "https://portal.cfx.re/",
+  },
+];
+
+const socials = [
+  {
+    icon: XIcon,
+    url: "https://servers.fivem.net/",
+  },
+  {
+    icon: DiscordIcon,
+    url: "https://servers.fivem.net/",
+  },
+  {
+    icon: GitHubIcon,
+    url: "https://forum.fivem.net/",
   },
 ];
 
@@ -42,64 +43,63 @@ const legal = [
     url: "https://www.rockstargames.com/privacy",
   },
   {
-    name: "Cookie Policy",
+    name: "Cookies",
     url: "https://www.rockstargames.com/cookies",
   },
   {
-    name: "Do Not Sell Or Share My Personal Information",
+    name: "Do not sell or share my personal information",
     url: "https://www.rockstargames.com/ccpa",
   },
 ];
 ---
 
-<footer class="space-y-8 w-[80%] py-8 md:mx-auto px-8">
-  <section class="flex flex-row justify-between md:justify-normal gap-4 md:gap-16">
-    {
-      sections.map((section) => {
-        return (
-          <section class="space-y-1">
-            <header>
-              <h1 class="text-xl font-medium">{section.name}</h1>
-            </header>
-            <main>
-              <ul>
-                {section.links.map((link) => (
-                  <li>
-                    <a
-                      class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all"
-                      href={link.url}
-                      target="blank"
-                      type="noreferrer"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </main>
-          </section>
-        );
-      })
-    }
-  </section>
-  <section class="space-y-6">
-    <p class="md:text-center text-gray-600 dark:text-gray-400">
-      Rockstar Games, Inc. (C) 2016-2024, FiveM is a copyright and registered
-      trademark of Take-Two Interactive Software, Inc. All rights reserved.
-    </p>
-    <ol class="flex md:flex-row flex-col gap-4 justify-center">
+<footer class="space-y-4 md:w-[80%] px-12 py-12 md:py-8 md:px-0 md:mx-auto">
+  <div class="flex justify-between">
+    <ul class="flex items-center gap-4">
       {
-        legal.map((link) => (
+        links.map((link) => (
           <li>
             <a
-              class="underline text-gray-400 dark:text-gray-200"
               href={link.url}
+              class="text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-gray-200 hover:underline font-medium transition-colors"
             >
               {link.name}
             </a>
           </li>
         ))
       }
-    </ol>
-  </section>
+    </ul>
+    <ul class="flex items-center gap-4">
+      {
+        socials.map((social) => (
+          <li>
+            <a
+              href={social.url}
+              class="text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-gray-200 font-medium transition-colors"
+            >
+              <social.icon />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <p class="text-gray-600 dark:text-gray-400">
+    Rockstar Games, Inc. (C) 2016-2024, FiveM is a copyright and registered
+    trademark of Take-Two Interactive Software, Inc. All rights reserved.
+  </p>
+  <ul class="flex justify-center items-center gap-4">
+    {
+      legal.map((link) => (
+        <li>
+          <a
+            href={link.url}
+            class="text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-gray-200 hover:underline font-medium transition-colors" 
+          >
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </footer>
