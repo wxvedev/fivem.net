@@ -1,0 +1,70 @@
+---
+const partners = [
+  {
+    name: "ZAP-Hosting",
+    description:
+      "Set up your server in under 5 minutes! Run your favorite gamemode, create your own scripts, and get creative!",
+    logo: "/partners/zap-hosting.jpg",
+    type: "Server Provider",
+    color: "green",
+    url: "https://zap-hosting.com/fivem2",
+  },
+  {
+    name: "Tebex",
+    description:
+      "With our Tebex integration you can get your server to the next level by providing your players your own web store.",
+    type: "Monetization Partner",
+    logo: "/partners/tebex.png",
+    color: "blue",
+    url: "https://tebex.io/",
+  },
+];
+
+const type: Record<string, string> = {
+  green: "bg-green/5 border border-green/25",
+  blue: "bg-blue/5 border border-blue/25",
+};
+---
+
+<main class="enter space-y-4" style="animation-delay: .1s;">
+  <header>
+    <h1 class="text-4xl font-semibold tracking-tighter">Our Partners</h1>
+  </header>
+  <main>
+    <section class="flex flex-col md:flex-row gap-4 md:gap-0">
+      <ul class="flex flex-col gap-4">
+        {
+          partners.map((partner) => (
+            <li
+              class={`flex gap-4 max-w-lg p-4 rounded-md ${type[partner.color]}`}
+              aria-label={partner.name}
+            >
+              <img
+                class="h-[6.2rem] rounded-md"
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                aria-label={`${partner.name} logo`}
+              />
+              <section class="flex flex-col">
+                <header class="flex flex-col md:flex-row justify-between items-start font-medium text-sm mb-2 md:mb-0">
+                  <a
+                    class="hover:underline"
+                    href={partner.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <h2 class="text-xl font-semibold">{partner.name}</h2>
+                  </a>
+                  <p class="text-gray-600 dark:text-gray-400">{partner.type}</p>
+                </header>
+                <p class="text-gray-600 dark:text-gray-400">
+                  {partner.description}
+                </p>
+              </section>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</main>

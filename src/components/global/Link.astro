@@ -1,5 +1,5 @@
 ---
-type Type = "red" | "discord" | "orange" | "none";
+type Type = "red" | "discord" | "orange" | "green" | "blue" | "none";
 
 interface Props {
   text: string;
@@ -11,9 +11,13 @@ interface Props {
 
 const colors: Record<Type, string> = {
   red: "bg-red/5 hover:bg-red border border-red rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
-  orange: "bg-orange/5 hover:bg-orange border border-orange rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
+  orange:
+    "bg-orange/5 hover:bg-orange border border-orange rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
   discord:
     "bg-indigo-700/5 hover:bg-indigo-700 border border-indigo-700 rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
+  green:
+    "bg-green/5 hover:bg-green border border-green rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
+  blue: "bg-blue/5 hover:bg-blue border border-blue rounded-md text-gray-800 hover:text-white dark:text-white font-semibold shadow-lg",
   none: "",
 };
 ---

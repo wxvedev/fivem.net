@@ -1,4 +1,6 @@
 ---
+import Features from "@/components/server-hosting/Features.astro";
+import Hero from "@/components/server-hosting/Hero.astro";
 import Layout from "@/layouts/Layout.astro";
 
 const SEO = {
@@ -9,5 +11,8 @@ const SEO = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-  <h1>Server hosting!</h1>
+  <main class="space-y-16">
+    <Hero />
+    <Features />
+  </main>
 </Layout>

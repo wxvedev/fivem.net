@@ -66,9 +66,7 @@ const variant: Record<Color, string> = {
         features.map((feature) => {
           const { title, description, color } = feature;
           return (
-            <li
-              class={`space-y-1 px-4 py-4 backdrop-blur-md ${variant[color]}`}
-            >
+            <li class={`space-y-1 px-4 py-4 ${variant[color]}`}>
               <header class="flex items-center gap-4">
                 <i class={`text-${color}`}>
                   <feature.icon />
@@ -76,7 +74,7 @@ const variant: Record<Color, string> = {
                 <h1 class="text-2xl font-semibold">{title}</h1>
               </header>
               <main>
-                <p class="text-gray-600 dark:text-gray-400 text-wrap">
+                <p class="text-sm text-gray-600 dark:text-gray-400 text-wrap">
                   {description}
                 </p>
               </main>
