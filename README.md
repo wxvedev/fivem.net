@@ -1,15 +1,19 @@
 # fivem.net redesign
 
+Hello 👋, I would like to get this pushed to the CFX team in the attempt to deploy a new and official version of the [FiveM](https://fivem.net) web.
+
+It does not have to be this version, in fact I believe there are improvements to be made to the design, and especially the code as I focused on getting the design process done first.
+
+I will end up going through the codebase within the next couple of days and clean everything up.
+
+I encourage any feedback and/or proposals.
+
+To get in contact with me, send me an [email](wxvedev@gmail.com) or a dm through [discord](https://discord.com/users/1294711660442947635)
+
 ![Desktop Landing Page](./public/captures/desktop_landing.png)
 
 ![Desktop Server Hosting Page](./public/captures/desktop_server_hosting.png)
 
-For some reason the captures came out low quality, meaning buttons, for example will look weird.
+The captures didn't come out how I liked due to the quality being low (for some reason).
 
-Run on local to see properly or [visit the page](https://fivem-web-redesign.vercel.app).
-
-## NOTE:
-
-The code inside this repo is far from perfect, I just worried about the design aspect.
-
-Will end up going through it within the next couple of days and organize it.
+View the [deployed web](https://fivem-web-redesign.vercel.app).
