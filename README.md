@@ -8,7 +8,7 @@ I will end up going through the codebase within the next couple of days and clea
 
 I encourage any feedback and/or proposals.
 
-To get in contact with me, send me an [email](wxvedev@gmail.com) or a dm through [discord](https://discord.com/users/1294711660442947635)
+To get in contact with me, send me an email to wxvedev@gmail.com or dm me through [discord](https://discord.com/users/1294711660442947635)
 
 ![Desktop Landing Page](./public/captures/desktop_landing.png)
 
