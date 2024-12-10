@@ -2,67 +2,59 @@
 import Link from "@/components/global/Link.astro";
 ---
 
-<main class="grid grid-cols-1 xl:grid-cols-2 enter">
-  <section class="flex flex-col gap-8 py-12">
-    <header class="space-y-6">
-      <h4 class="text-lg text-gray-600 dark:text-gray-400 text-wrap">
-        Join the 224.7k people that are online right now!
-      </h4>
-      <h1
-        class="text-gray-800 dark:text-white text-3xl md:text-5xl font-bold tracking-tight leading-tight text-wrap"
+<main class="enter space-y-8 mt-16">
+  <header class="flex flex-col gap-4 items-center justify-center text-center">
+    <h2 class="text-sm md:text-lg text-gray-600 dark:text-gray-400 text-wrap">
+      Join the 224.7k people that are online right now!
+    </h2>
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter max-w-2xl"
+    >
+      The <span class="text-orange">Multiplayer Platform</span> you've dreamt of
+    </h1>
+    <h4 class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mt-2">
+      We help you bring your vision to life with the powerful <a
+        class="text-red-500 font-semibold hover:text-red-400 transition-colors duration-300"
+        href="https://cfx.re"
       >
-        The <span class="text-orange">Multiplayer Platform</span> you've dreamt of
-      </h1>
-      <p class="text-lg text-gray-600 dark:text-gray-400 text-wrap">
-        Join unique GTA V Servers designed by the community or create your own
-        with our extensive toolset powered by <a
-          class="hover:underline"
-          href="https://cfx.re">Cfx.re</a
-        >.
-      </p>
-    </header>
+        Cfx.re
+      </a> platform.
+    </h4>
+  </header>
 
-    <footer class="space-y-8">
-      <section class="flex flex-col sm:flex-row items-center gap-6">
-        <Link
-          class="hidden md:block py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
-          text="Download Now!"
-          target="current"
-          color="orange"
-          url="https://runtime.fivem.net/client/FiveM.exe"
-        />
-        <Link
-          class="block md:hidden py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
-          text="Visit our forums"
-          target="new"
-          color="red"
-          url="https://forum.cfx.re"
-        />
-        <Link
-          class="py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center sm:w-fit"
-          text="Join our Discord"
-          target="current"
-          color="discord"
-          url="https://discord.gg/fivem"
-        />
-      </section>
+  <footer class="space-y-8">
+    <section class="mx-auto max-w-2xl flex items-center justify-center gap-6">
+      <Link
+        class="hidden md:block py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center hover:scale-105"
+        text="Download Now!"
+        target="current"
+        color="orange"
+        url="https://runtime.fivem.net/client/FiveM.exe"
+      />
+      <Link
+        class="block md:hidden py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center hover:scale-105"
+        text="Visit our forums"
+        target="new"
+        color="red"
+        url="https://forum.cfx.re"
+      />
+      <Link
+        class="py-4 px-6 md:px-8 text-sm md:text-lg w-full text-center hover:scale-105"
+        text="Join our Discord"
+        target="current"
+        color="discord"
+        url="https://discord.gg/fivem"
+      />
+    </section>
 
-      <p class="text-lg text-gray-600 dark:text-gray-400">
-        Interested in creating your own server? <Link
-          class="hover:text-red font-semibold"
-          text="Get Started"
-          target="current"
-          color="none"
-          url="/server-hosting"
-        />
-      </p>
-    </footer>
-  </section>
-
-  <section class="hidden lg:block mt-16">
-    <img
-      src="hero/gtaonline-the-criminal-enterprises-alternative-artwork-png-8717-1600.png"
-      alt="Hero"
-    />
-  </section>
+    <p class="text-center text-lg text-gray-600 dark:text-gray-400">
+      Interested in creating your own server? <Link
+        class="hover:text-red font-semibold"
+        text="Get Started"
+        target="current"
+        color="none"
+        url="/server-hosting"
+      />
+    </p>
+  </footer>
 </main>

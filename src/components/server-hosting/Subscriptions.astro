@@ -77,12 +77,12 @@ const tiers = [
       >
     </h4>
   </header>
-  <div class="min-h-screen text-white p-8">
+  <div class="text-white p-8">
     <div class="max-w-7xl mx-auto space-y-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
           tiers.map((tier) => (
-            <div class="rounded-md p-6 space-y-6">
+            <div class="flex flex-col justify-between rounded-lg p-6 space-y-6 bg-zinc-950/50 border border-black/5 dark:border-white/5"> 
               <div class="space-y-2">
                 <h3 class="text-center text-zinc-400">{tier.name}</h3>
                 <div class="text-center">
