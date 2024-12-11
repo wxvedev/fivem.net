@@ -2,67 +2,7 @@
 import Feature from "../global/Feature.astro";
 import Link from "../global/Link.astro";
 
-const tiers = [
-  {
-    name: "PEBBLE",
-    price: 0,
-    monthlyPrice: 0,
-    slots: "Up to 48",
-    features: {
-      streamCustomClothing: false,
-      elementClubForum: false,
-      elementClubDiscord: false,
-      colorCode: false,
-      highlight: false,
-      animatedIcons: false,
-    },
-  },
-  {
-    name: "ARGENTUM",
-    price: 206.91,
-    monthlyPrice: 17.24,
-    slots: "Up to 64",
-    saveAmount: 4,
-    features: {
-      streamCustomClothing: true,
-      elementClubForum: true,
-      elementClubDiscord: true,
-      colorCode: true,
-      highlight: false,
-      animatedIcons: false,
-    },
-  },
-  {
-    name: "AURUM",
-    price: 344.85,
-    monthlyPrice: 28.74,
-    slots: "Up to 128, 64 with Legacy Onesync",
-    saveAmount: 5,
-    features: {
-      streamCustomClothing: true,
-      elementClubForum: true,
-      elementClubDiscord: true,
-      colorCode: true,
-      highlight: "Aurum Gold",
-      animatedIcons: false,
-    },
-  },
-  {
-    name: "PLATINUM",
-    price: 689.7,
-    monthlyPrice: 57.48,
-    slots: "Up to 2048 (1024 for RedM), 128 with Legacy Onesync",
-    saveAmount: 5,
-    features: {
-      streamCustomClothing: true,
-      elementClubForum: true,
-      elementClubDiscord: true,
-      colorCode: true,
-      highlight: "Cfx.re Magenta",
-      animatedIcons: true,
-    },
-  },
-];
+import { tiers } from "@/consts/server-hosting/subscriptions";
 ---
 
 <main class="enter" style="animation-delay: .15s;">

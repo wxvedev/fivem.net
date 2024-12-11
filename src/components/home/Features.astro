@@ -1,48 +1,7 @@
 ---
-import CloudDownloadIcon from "@/assets/icons/features/CloudDownload.astro";
-import UserGroupIcon from "@/assets/icons/features/UserGroup.astro";
-import SyncAltIcon from "@/assets/icons/features/SyncAlt.astro";
-import WidgetsIcon from "@/assets/icons/features/Widgets.astro";
+import { homeFeatures } from "@/consts/feature";
 
 type Color = "aqua" | "blue" | "yellow" | "red";
-
-type Feature = {
-  title: string;
-  description: string;
-  icon: any;
-  color: Color;
-};
-
-const features: Feature[] = [
-  {
-    title: "Streaming",
-    description:
-      "Transform your server with custom vehicles, maps, weapons, and more, all loaded seamlessly in real-time.",
-    icon: CloudDownloadIcon,
-    color: "aqua",
-  },
-  {
-    title: "AI",
-    description:
-      "Enjoy immersive gameplay with native AI functionality. Engage in PvE combat or roam with NPC companions.",
-    icon: UserGroupIcon,
-    color: "blue",
-  },
-  {
-    title: "Sync",
-    description:
-      "Experience smooth multiplayer interactions with improved network code built on Rockstar's original technology.",
-    icon: SyncAltIcon,
-    color: "yellow",
-  },
-  {
-    title: "Standalone",
-    description:
-      "Switch effortlessly between GTA Online and FiveM without altering your GTA V installation or risking a ban.",
-    icon: WidgetsIcon,
-    color: "red",
-  },
-];
 
 const variant: Record<Color, string> = {
   aqua: "border border-aqua/25 bg-aqua/5 text-aqua rounded-md",
@@ -53,17 +12,10 @@ const variant: Record<Color, string> = {
 ---
 
 <main class="enter space-y-4" style="animation-delay: .05s;">
-  <header class="space-y-1">
-    <h1 class="text-4xl font-semibold tracking-tighter">Features</h1>
-    <h4 class="text-lg text-gray-600 dark:text-gray-400">
-      Below are some of the many features we provide.
-    </h4>
-  </header>
-
   <main>
     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mx-auto">
       {
-        features.map((feature) => {
+        homeFeatures.map((feature) => {
           const { title, description, color } = feature;
           return (
             <li class={`space-y-1 px-4 py-4 ${variant[color]}`}>

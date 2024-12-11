@@ -1,13 +1,5 @@
 ---
-import HamburgerIcon from "@/assets/icons/navigation/Hamburger.astro";
-import CloseIcon from "@/assets/icons/navigation/Close.astro";
-
-const nav = [
-  { name: "Forum", url: "https://forum.cfx.re/" },
-  { name: "Servers", url: "https://servers.fivem.net/" },
-  { name: "Docs", url: "https://docs.fivem.net/" },
-  { name: "Portal", url: "https://portal.cfx.re/" },
-];
+import { nav } from "@/consts/global/header"
 ---
 
 <header
@@ -20,7 +12,6 @@ const nav = [
       <img src="/rockstar_cfx.png" alt="Logo" class="w-48 md:w-64" />
     </a>
 
-    <!-- Desktop Navigation -->
     <aside class="hidden md:flex items-center gap-8">
       {
         nav.map((item) => (

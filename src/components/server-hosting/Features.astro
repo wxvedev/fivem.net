@@ -1,39 +1,6 @@
 ---
-import CloudDownloadIcon from "@/assets/icons/features/CloudDownload.astro";
-import UserGroupIcon from "@/assets/icons/features/UserGroup.astro";
-import SyncAltIcon from "@/assets/icons/features/SyncAlt.astro";
-import WidgetsIcon from "@/assets/icons/features/Widgets.astro";
-
+import { hostingFeatures  } from "@/consts/feature";
 type Color = "aqua" | "blue" | "yellow" | "red";
-
-type Feature = {
-  text: string;
-  icon: any;
-  color: Color;
-};
-
-const features: Feature[] = [
-  {
-    text: "Using our advanced OneSync framework, up to 2048 people can join your server at any given time!",
-    icon: UserGroupIcon,
-    color: "aqua",
-  },
-  {
-    text: "Create a unique environment with our support for AI, custom cars, objects, maps, weapons, and more.",
-    icon: CloudDownloadIcon,
-    color: "blue",
-  },
-  {
-    text: "With over 5200 functions at your disposal, anything is possible. Your imagination is the limit.",
-    icon: WidgetsIcon,
-    color: "yellow",
-  },
-  {
-    text: "FiveM uses Rockstar's network code with significant improvements, so you'll have the best sync around.",
-    icon: SyncAltIcon,
-    color: "red",
-  },
-];
 
 const variant: Record<Color, string> = {
   aqua: "border border-aqua/25 bg-aqua/5 text-aqua rounded-md",
@@ -47,7 +14,7 @@ const variant: Record<Color, string> = {
   <main>
     <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mx-auto">
       {
-        features.map((feature) => {
+        hostingFeatures.map((feature) => {
           return (
             <li
               class={`flex gap-4 items-center px-4 py-4 ${variant[feature.color]}`}
@@ -57,7 +24,7 @@ const variant: Record<Color, string> = {
               </i>
               <main>
                 <p class="text-sm text-gray-600 dark:text-gray-400 text-wrap">
-                  {feature.text}
+                  {feature.title}
                 </p>
               </main>
             </li>
