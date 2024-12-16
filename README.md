@@ -10,9 +10,9 @@ I encourage any feedback and/or proposals.
 
 To get in contact with me, send me an email to wxvedev@gmail.com or dm me through [discord](https://discord.com/users/1294711660442947635)
 
-![Desktop Landing Page](./public/captures/desktop_landing.png)
+![Desktop Landing Page](/preview/desktop_landing.png)
 
-![Desktop Server Hosting Page](./public/captures/desktop_server_hosting.png)
+![Desktop Server Hosting Page](/preview/desktop_server_hosting.png)
 
 The captures didn't come out how I liked due to the quality being low (for some reason).
 
